@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .stage{
+            width: 800px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        .ball{
+            position: relative;
+            animation: bounce 2s ease-in-out 0.2s infinite alternate;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: yellow;
+        }
+
+        @keyframes bounce{
+            0%{
+                top: 0;
+                left: 0;
+                transform: scale(1.3);
+            }
+
+            25%{
+                top: 300px;
+                background-color: brown;
+                transform: scale(0.5);
+            }
+
+            50%{
+                top: 0;
+                background-color: blue;
+                transform: scale(1.3);
+            }
+
+            75%{
+                top: 300px;
+                background-color: rebeccapurple;
+                transform: scale(0.5);
+            }
+            100%{
+                top: 0;
+                left: 750px;
+                background-color: aliceblue;
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="ball">
+        </div>
+    </div>
+</body>
+</html>
